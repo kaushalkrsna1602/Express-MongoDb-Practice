@@ -2,13 +2,13 @@ const express = require("express")
 const app = express()
 app.use(express.json())
 const {connectDB} = require("./lib/database")
-const { userRouter } = require("./routes/userRoutes")
+const { custumerRoutes } = require("./routes/custumerRoutes")
 const { productRouter } = require("./routes/productRoutes")
 
 
 connectDB()
 
-app.use(userRouter)
+app.use(custumerRoutes)
 app.use(productRouter)
 
 
